@@ -12,6 +12,7 @@ class PetsController < ApplicationController
 
   post '/pets' do 
     @owners = Owner.all
+    @pet = 
     
     redirect to "pets/#{@pet.id}"
   end
