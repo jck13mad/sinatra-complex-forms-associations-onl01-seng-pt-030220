@@ -25,7 +25,7 @@ class PetsController < ApplicationController
   get '/pets/:id' do 
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
-    
+    if !params
     
     erb :'/pets/show'
   end
