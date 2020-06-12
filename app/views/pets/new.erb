@@ -8,5 +8,8 @@
  <p>Select an existing pet or create a new one below.</p>
  
  <% @owners.each do |o| %>
-  
+    <input type="radio" name="pet[owner_id]" id="<%= o.id %>" value="<%= o.id %>"><%= o.name %><br>
+  <% end %>
+    
+    
 </form>
