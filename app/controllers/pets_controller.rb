@@ -13,7 +13,7 @@ class PetsController < ApplicationController
   post '/pets' do 
     @owners = Owner.all
     @pet = Pet.create(params[:pet])
-    
+    if !params
     
     redirect to "pets/#{@pet.id}"
   end
