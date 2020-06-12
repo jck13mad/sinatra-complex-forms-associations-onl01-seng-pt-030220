@@ -25,7 +25,8 @@ class PetsController < ApplicationController
   get '/pets/:id' do 
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
-    if !params["owner"]["id"]
+    if !params["owner"]["name"].empty?
+      
     
     erb :'/pets/show'
   end
