@@ -14,5 +14,5 @@
   
   <h3>Existing Owners</h3>
   <% @owners.each do |o| %>
-    <input type="radio" name="pet[owner_id]" id="<%= @owner.id %>" value="<%= @owner.id %>" <%= 'checked' if @pet.owner == owner %>> <%=  
+    <input type="radio" name="pet[owner_id]" id="<%= @owner.id %>" value="<%= @owner.id %>" <%= 'checked' if @pet.owner == owner %>> <%= owner.name %> 
 </form>
